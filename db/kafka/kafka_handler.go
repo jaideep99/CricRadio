@@ -13,7 +13,7 @@ import "github.com/segmentio/kafka-go"
 
 var (
 	host           = "localhost"
-	port           = "9093"
+	port           = "39092"
 	ControllerConn *kafka.Conn
 	brokerUrl      string
 )
