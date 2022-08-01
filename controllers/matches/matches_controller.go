@@ -7,7 +7,7 @@ import (
 )
 
 func ListMatches(c *gin.Context) {
-
+	c.Header("Access-Control-Allow-Origin", "*")
 	matches, err := services.MatchesService.List()
 	if err != nil {
 		c.JSON(err.Status, err)
