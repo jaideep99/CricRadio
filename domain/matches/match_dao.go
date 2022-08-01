@@ -71,7 +71,7 @@ func (m *Match) Delete(matchId string) (int64, *errors.RestErr) {
 		return -1, errors.NewInternalServerError("database error")
 	}
 	defer stmt.Close()
-	result, err := stmt.Exec(m.MatchId)
+	result, err := stmt.Exec(matchId)
 	if err != nil {
 		logger.Info("error when trying to delete match!")
 		return -1, errors.NewInternalServerError("database error")
