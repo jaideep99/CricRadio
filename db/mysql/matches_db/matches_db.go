@@ -54,7 +54,7 @@ func init() {
 		fmt.Println("Successfully using database..")
 	}
 
-	stmt, err := Client.Prepare("CREATE TABLE IF NOT EXISTS matchers(matchId VARCHAR(100) NOT NULL,seriesId VARCHAR(100) NOT NULL,teams VARCHAR(100) NOT NULL,details VARCHAR(200) NULL,url VARCHAR(200) NOT NULL,PRIMARY KEY(matchId));")
+	stmt, err := Client.Prepare("CREATE TABLE IF NOT EXISTS matches(matchId VARCHAR(100) NOT NULL,seriesId VARCHAR(100) NOT NULL,teams VARCHAR(100) NOT NULL,details VARCHAR(200) NULL,url VARCHAR(200) NOT NULL,PRIMARY KEY(matchId));")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
