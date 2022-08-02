@@ -60,7 +60,7 @@ func CreateTopic(topicName string) {
 }
 
 func DeleteTopic(topicName string) {
-
+	//delete.topic.enable property should be enabled.
 	err := ControllerConn.DeleteTopics(topicName)
 	if err != nil {
 		logger.Error("Topic Deletion Failed : ", err)
